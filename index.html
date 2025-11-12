@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Blog de Programación</title>
+  <style>
+    /* ===== Reset ===== */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f8;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+a {text-decoration: none; color: inherit; transition: color .2s;}
+a:hover {color: #4f46e5;}
+ul {list-style: none;}
+
+/* Scroll suave */
+html {scroll-behavior: smooth;}
+
+/* ===== Header ===== */
+header {
+  background: linear-gradient(90deg, #2563eb, #4f46e5);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+header h1 {
+  font-size: 2rem;
+  text-align: center;
+  flex: 1 1 100%;
+  margin-bottom: 0.5rem;
+}
+header nav {flex: 1 1 auto; text-align: center;}
+header nav a {margin: 0 1rem; font-weight: bold; color: #e0e7ff;}
+
+/* ===== Layout ===== */
+main {
+  display: flex;
+  justify-content: flex-start; /* mueve contenido a la izquierda */
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 0 0 2rem; /* desplazamiento hacia la izquierda */
+  flex: 1;
+  align-items: start;
+  gap: 2rem;
+}
+
+
+/* ===== Posts ===== */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* dos columnas */
+  gap: 2rem;
+}
+
+.posts article {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+  transition: transform .3s, box-shadow .3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 340px; /* todas mismas altura */
+  width: 100%;
+}
+
+.posts article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+/* ===== Flex para texto e imagen ===== */
+.posts article .article-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.posts article .text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.posts article .image {
+  flex: 0 0 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.posts article .image img {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: contain; /* se adapta sin cortar */
+  background: #ffffff; /* fondo gris claro si la imagen no llena el contenedor */
+}
+
+/* ===== Títulos, texto y tags ===== */
+.posts h2 {
+  margin-bottom: .8rem;
+  color: #2563eb;
+  text-align: center;
+  font-size: 1.6rem;
+}
+.posts p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  font-size: 0.95rem;
+}
+.tags span {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: .3rem .7rem;
+  margin: 0 .3rem .3rem 0;
+  border-radius: 5px;
+  font-size: .85rem;
+}
+
+/* ===== Sidebar ===== */
+aside {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+  height: fit-content;
+  transition: transform .2s;
+  position: sticky;
+  top: 2rem;
+}
+aside:hover {transform: translateY(-2px);}
+aside h3 {margin-bottom: .8rem; color: #111827; text-align: center;}
+aside ul li {
+  margin: .5rem 0;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: .3rem;
+  border-radius: 5px;
+  transition: background .2s;
+}
+aside ul li a {color: #2563eb;}
+aside ul li:hover {background: #e0e7ff;}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2563eb;
+  color: #9ca3af;
+  margin-top: auto;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .posts {
+    grid-template-columns: 1fr; /* una columna en pantallas pequeñas */
+  }
+  main {
+    flex-direction: column;
+    padding-left: 1rem;
+  }
+  aside {
+    margin-top: 1.5rem;
+    position: relative;
+    top: 0;
+  }
+  .posts article {
+    height: auto; /* altura automática en móviles */
+  }
+  .posts article .article-content {flex-direction: column;}
+  .posts article .image {
+    width: 100%;
+    height: auto;
+  }
+  .posts article .image img {
+    height: auto;
+    max-height: 200px;
+  }
+  header h1 {font-size: 1.8rem;}
+  header nav {margin-top: .5rem;}
+}
+
+  </style>
+</head>
+<body>
+  <header>
+  <div class="logo-titulo">
+    <h1>Mi Blog de Programación</h1>
+  </div>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="sobre-mi.html">Sobre mí</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</header>
+
+
+  <main>
+    <section class="posts">
+      
+      <h1>UNIDAD 0: INTRODUCCIÓN AL DISEÑO WEB</h1>
+      <br>
+
+      <a href="/Tema_01/Ejercicio1_1/Lineadeltiempo.html">
+  <article id="historia">
+    <div class="article-content">
+      <div class="text">
+        <h2>Línea del tiempo</h2>
+        <p>Línea temporal sobre el diseño web y su evolución a lo largo de los años.</p>
+        <div class="tags"><span>Diseño</span><span>Historia</span></div>
+      </div>
+      <div class="image">
+        <img src="Imagenes/line.jpg" alt="Línea del tiempo">
+      </div>
+    </div>
+  </article>
+</a>
+
+  <a href="/Tema_01/Ejercicio1_3/Ux.html">
+      <article id="diseno">
+        <div class="article-content">
+          <div class="text">
+            <h2>Diseño de interfaz</h2>
+            <p>Observamos lo fundamental del diseño de interfaz y cómo aplicarlos en proyectos web.</p>
+            <div class="tags"><span>UI</span><span>Proyectos</span></div>
+          </div>
+          <div class="image">
+            <img src="Imagenes/diseo.webp" alt="Diseño de interfaz">
+          </div>
+        </div>
+      </article>
+
+    <a href="/Tema_01/Ejercicio1_2/Diseñoactual.html">  
+      <article id="ux">
+        <div class="article-content">
+          <div class="text">
+            <h2>Principios del diseño interactivo</h2>
+            <p>Conocemos los principios del diseño interactivo, sus ventajas e inconvenientes.</p>
+            <div class="tags"><span>UX</span><span> Interactividad</span></div>
+          </div>
+          <div class="image">
+            <img src="Imagenes/principios.jpg" alt="Principios del diseño interactivo">
+          </div>
+        </div>
+      </article>
+
+      <a href="/Tema_01/Ejercicio1_5/LeyesGestalt.html">  
+      <article id="gestalt">
+        <div class="article-content">
+          <div class="text">
+            <h2>Leyes de Gestalt</h2>
+            <p>Todas las leyes de Gestalt y cómo se aplican al diseño visual.</p>
+            <div class="tags"><span>UX</span><span> Interactividad</span></div>
+          </div>
+          <div class="image">
+            <img src="Imagenes/gest.png" alt="Leyes de Gestalt">
+          </div>
+        </div>
+      </article>
+
+      <a href="/Tema_01/Ejercicio1_5/LeyesGestalt.html"> 
+      <article id="estructurales">
+        <div class="article-content">
+          <div class="text">
+            <h2>Elementos estructurales</h2>
+            <p>Exploramos los elementos estructurales del diseño web y su importancia en la creación de interfaces efectivas.</p>
+            <div class="tags"><span>UX</span><span> Interactividad</span></div>
+          </div>
+          <div class="image">
+            <img src="Imagenes/elem.png" alt="Elementos estructurales">
+          </div>
+        </div>
+      </article>
+
+        <a href="/Tema_01/Ejercicio1_17/CMS.html">  
+    <article id="CMS">
+        <div class="article-content">
+          <div class="text">
+            <h2>CMS</h2>
+            <p>CMS</p>
+            <div class="tags"><span>UX</span><span> Interactividad</span></div>
+          </div>
+          <div class="image">
+            <img src="Imagenes/cms.png" alt="Elementos estructurales">
+          </div>
+        </div>
+      </article>
+
+      <h1>UNIDAD 1: PLANIFICACIÓN DE INTERFACES GRÁFICAS</h1>
+      <br>
+
+      <h1>UNIDAD 2: HOJAS DE ESTILO CSS</h1>
+      <br>
+
+      <a href="/Tema_2/Ejercicio2_2/Ejercicio2_2_2.html">  
+    <article id="Cascada">
+        <div class="article-content">
+          <div class="text">
+            <h2>Orden en cascada</h2>
+            <p>Las hojas de estilo CSS se aplican en un orden específico, conocido como "cascada".</p>
+            <div class="tags"><span>CSS</span><span> Diseño</span></div>
+          </div>
+          <div class="image">
+            <img src="Imagenes/cas.jpg" alt="Elementos estructurales">
+          </div>
+        </div>
+      </article>
+
+      <a href="/Tema_2/Ejercicio2_3/Ejercicio2_3.html">  
+    <article id="Encabezados">
+        <div class="article-content">
+          <div class="text">
+            <h2>Encabezados y párrafos</h2>
+            <p>Estilizar encabezados y párrafos utilizando CSS para mejorar la presentación del contenido web.</p>
+            <div class="tags"><span>CSS</span><span> Diseño</span></div>
+          </div>
+          <div class="image">
+            <img src="Imagenes/ea.jpg" alt="Elementos estructurales">
+          </div>
+        </div>
+      </article>
+
+      <a href="/Tema_2/Ejercicio2_4/Ejercicio2_4.html">  
+    <article id="Style">
+        <div class="article-content">
+          <div class="text">
+            <h2>Style</h2>
+            <p>Uso de la etiqueta &lt;style&gt; para incluir CSS directamente en el documento HTML.</p>
+            <div class="tags"><span>CSS</span><span> Diseño</span></div>
+          </div>
+          <div class="image">
+            <img src="Imagenes/style.webp" alt="Elementos estructurales">
+          </div>
+        </div>
+      </article>
+          
+      <a href="/Tema_2/Ejercicio2_5/Ejercicio2_5.html">  
+    <article id="Externo">
+        <div class="article-content">
+          <div class="text">
+            <h2>CSS Externo</h2>
+            <p>Uso de la etiqueta &lt;link&gt; para incluir archivos CSS externos en el documento HTML.</p>
+            <div class="tags"><span>CSS</span><span> Diseño</span></div>
+          </div>
+          <div class="image">
+            <img src="Imagenes/eee.png" alt="Elementos estructurales">
+          </div>
+        </div>
+      </article>
+
+      <a href="/Tema_2/Ejercicio2_6/Ejercicio2_6.html">  
+    <article id="Selectores">
+        <div class="article-content">
+          <div class="text">
+            <h2>Selectores básicos</h2>
+            <p>Uso de selectores básicos en CSS para aplicar estilos a elementos HTML.</p>
+            <div class="tags"><span>CSS</span><span> Diseño</span></div>
+          </div>
+          <div class="image">
+            <img src="Imagenes/selector.png" alt="Elementos estructurales">
+          </div>
+        </div>
+      </article>
+
+      <a href="/Tema_2/Ejercicio2_7/Ejercicio2_7.html">  
+    <article id="Selectores">
+        <div class="article-content">
+          <div class="text">
+            <h2>Selectores básicos</h2>
+            <p>Uso de selectores básicos en CSS para aplicar estilos a elementos HTML.</p>
+            <div class="tags"><span>CSS</span><span> Diseño</span></div>
+          </div>
+          <div class="image">
+            <img src="Imagenes/se.png" alt="Elementos estructurales">
+          </div>
+        </div>
+      </article>
+
+      <a href="/Tema_2/Ejercicio2_8/Ejercicio2_8.html">  
+    <article id="Selectores">
+        <div class="article-content">
+          <div class="text">
+            <h2>Selectores básicos</h2>
+            <p>Uso de selectores básicos en CSS para aplicar estilos a elementos HTML.</p>
+            <div class="tags"><span>CSS</span><span> Diseño</span></div>
+          </div>
+          <div class="image">
+            <img src="Imagenes/seee.png" alt="Elementos estructurales">
+          </div>
+        </div>
+      </article>
+
+      <a href="/Tema_2/Ejercicio2_9/Ejercicio2_9.html">  
+    <article id="Selectores">
+        <div class="article-content">
+          <div class="text">
+            <h2>Combinadores</h2>
+            <p>Uso de combinadores en CSS para aplicar estilos a elementos HTML.</p>
+            <div class="tags"><span>CSS</span><span> Diseño</span></div>
+          </div>
+          <div class="image">
+            <img src="Imagenes/comb.png" alt="Elementos estructurales">
+          </div>
+        </div>
+      </article>
+
+      <a href="/Tema_2/Ejercicio2_10/Ejercicio2_10.html">  
+    <article id="Selectores">
+        <div class="article-content">
+          <div class="text">
+            <h2>Selectores básicos</h2>
+            <p>Uso de selectores básicos en CSS para aplicar estilos a elementos HTML.</p>
+            <div class="tags"><span>CSS</span><span> Diseño</span></div>
+          </div>
+          <div class="image">
+            <img src="Imagenes/sel.png" alt="Elementos estructurales">
+          </div>
+        </div>
+      </article>
+
+      <a href="/Tema_2/Ejercicio2_11/Ejercicio2_11.html">  
+    <article id="Selectores">
+        <div class="article-content">
+          <div class="text">
+            <h2>Especificidad</h2>
+            <p>Regla que determina qué estilos se aplican a un elemento cuando hay múltiples reglas en él.</p>
+            <div class="tags"><span>CSS</span><span> Diseño</span></div>
+          </div>
+          <div class="image">
+            <img src="Imagenes/espe.webp" alt="Elementos estructurales">
+          </div>
+        </div>
+      </article>
+
+      <a href="/Tema_2/Ejercicio2_12/Ejercicio2_12.html">  
+    <article id="Selectores">
+        <div class="article-content">
+          <div class="text">
+            <h2>Herencia</h2>
+            <p>Permite que los estilos se apliquen a elementos hijos a partir de sus elementos padres.</p>
+            <div class="tags"><span>CSS</span><span> Diseño</span></div>
+          </div>
+          <div class="image">
+            <img src="Imagenes/herencia.jpg" alt="Elementos estructurales">
+          </div>
+        </div>
+      </article>
+
+      <a href="/Tema_2/Ejercicio2_13/Ejercicio2_13.html">  
+    <article id="Selectores">
+        <div class="article-content">
+          <div class="text">
+            <h2>Herencia, especificidad y cascada</h2>
+            <p>Uso de selectores básicos en CSS para aplicar estilos a elementos HTML.</p>
+            <div class="tags"><span>CSS</span><span> Diseño</span></div>
+          </div>
+          <div class="image">
+            <img src="Imagenes/es.png" alt="Elementos estructurales">
+          </div>
+        </div>
+      </article>
+
+      <a href="/Tema_2/Ejercicio2_14/Ejercicio2_14.html">  
+    <article id="Selectores">
+        <div class="article-content">
+          <div class="text">
+            <h2>Unidades de medida</h2>
+            <p>Fundamentales para crear diseños responsivos y adaptables.</p>
+            <div class="tags"><span>CSS</span><span> Diseño</span></div>
+          </div>
+          <div class="image">
+            <img src="Imagenes/un.png" alt="Elementos estructurales">
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    Creado por Alejandro González para compartir programación y ejercicios prácticos.
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

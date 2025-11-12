@@ -1,0 +1,14 @@
+h1 {
+    color: green;
+}
+
+p {
+    color: red;
+}
+
+/*
+Las ventajas de usar un css externo son: 
+- Mejora la organización del código.
+- Facilita la reutilización de estilos en múltiples páginas.
+- Permite un mantenimiento más sencillo y eficiente.
+*/

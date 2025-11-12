@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio CSS</title>
+  <link rel="stylesheet" href="Ejercicio2_12.html">
+</head>
+
+<body>
+  <div class="parent">
+    <p class="default">Texto con estilo por defecto.</p>
+    <p class="inherit">Texto con <b>inherit</b>.</p>
+    <p class="initial">Texto con <b>initial</b>.</p>
+    <p class="unset">Texto con <b>unset</b>.</p>
+    <p class="revert">Texto con <b>revert</b>.</p>
+  </div>
+
+<!-- 
+  ¿Qué estilo toma el texto con inherit? ¿Por qué?
+  Toma el estilo del elemento padre (.parent): fuente Courier New y color rojo, porque inherit hereda las propiedades del contenedor.
+
+  ¿Cómo se comporta el texto con initial? ¿Qué significa este valor?
+  Vuelve al valor por defecto del navegador (fuente Times New Roman, color negro). Initial restaura el valor inicial definido por CSS.
+
+  ¿Qué sucede con unset? ¿Es diferente para propiedades heredables y no heredables?
+  Sí. Si la propiedad es heredable, actúa como inherit; si no, como initial. En este caso, se comporta como inherit.
+
+  ¿Cómo actúa revert en comparación con los otros valores?
+  Revierte al valor definido por el navegador o el usuario, ignorando las reglas del autor. Suele parecerse a initial, pero depende del estilo base del navegador.
+-->
+
+</body>
+
+</html>

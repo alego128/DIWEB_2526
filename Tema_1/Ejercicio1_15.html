@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Ancho Fijo</title>
+    <style>
+        /* Contenedor principal con ancho fijo y centrado */
+        .container {
+            width: 800px;           /* Ancho fijo */
+            margin: 0 auto;         /* Centrado horizontal */
+            border: 1px solid #ccc; /* Borde opcional para ver el contenedor */
+            padding: 20px;
+            box-sizing: border-box; /* Para incluir padding dentro del ancho */
+            font-family: Arial, sans-serif;
+        }
+
+        header, nav, main, footer {
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        main img {
+            max-width: 100%; 
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Cabecera -->
+        <header>
+            <h1 style="text-align:center;">Página con Ancho Fijo</h1>
+        </header>
+
+        <!-- Navegación -->
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido principal -->
+        <main>
+            <h2>Contenido Principal</h2>
+            <p>Esta página tiene un ancho fijo de 800 píxeles y se mantiene centrada sin importar el tamaño de la ventana del navegador.</p>
+            <img src="ww.jpeg" alt="Imagen de ejemplo">
+        </main>
+
+        <!-- Pie de página -->
+        <footer>
+            &copy; 2025 Alejandro González
+        </footer>
+    </div>
+
+</body>
+</html>

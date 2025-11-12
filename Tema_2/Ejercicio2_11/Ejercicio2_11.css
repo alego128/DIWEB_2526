@@ -1,0 +1,24 @@
+/*todos los h1 */
+h1 {
+    color: blue;
+}
+
+/*elementos con clase .titulo */
+.titulo {
+    color: green;
+}
+
+/*elemento con id="parrafo" */
+#parrafo {
+    color: red;
+}
+
+/*.texto dentro de .contenedor */
+.contenedor .texto {
+    color: purple !important;
+}
+
+/*todos los <p> */
+p {
+    color: gray;
+}

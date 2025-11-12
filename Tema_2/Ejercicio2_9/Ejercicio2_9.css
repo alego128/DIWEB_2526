@@ -1,0 +1,19 @@
+section h2 {
+    color: black;
+}
+
+h2 {
+    color: red;
+}
+
+.intro {
+    background-color:gray;
+}
+
+p {
+    color: blue;
+}
+
+.intro + p {
+    background-color: yellow;
+}

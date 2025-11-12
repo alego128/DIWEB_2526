@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre mí | Mi Blog de Programación</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f8;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    a {text-decoration: none; color: inherit; transition: color .2s;}
+    a:hover {color: #4f46e5;}
+    header {
+      background: linear-gradient(90deg, #2563eb, #4f46e5);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      font-size: 2rem;
+      text-align: center;
+      flex: 1 1 100%;
+      margin-bottom: 0.5rem;
+    }
+    header nav {flex: 1 1 auto; text-align: center;}
+    header nav a {margin: 0 1rem; font-weight: bold; color: #e0e7ff;}
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,.1);
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+    .about img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    }
+    .about-text {
+      flex: 1;
+    }
+    .about-text h2 {
+      color: #2563eb;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+    .about-text p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+    .skills {
+      background: #f9fafb;
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+    .skills h3 {
+      color: #111827;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .7rem;
+    }
+    .skill-list span {
+      background: #e0e7ff;
+      color: #3730a3;
+      padding: .5rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: .95rem;
+      transition: background .2s;
+    }
+    .skill-list span:hover {background: #c7d2fe;}
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #111827;
+      color: #9ca3af;
+      margin-top: auto;
+    }
+    @media (max-width: 768px) {
+      .about {flex-direction: column;}
+      .about img {width: 180px; height: 180px;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mi Blog de Programación</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about">
+      <img src="Imagenes/patrick.jpg" alt="Foto de Alejandro González">
+      <div class="about-text">
+        <h2>Hola, soy Alejandro González 👋</h2>
+        <p>
+          Soy un apasionado del desarrollo web y la tecnología. Me encanta crear interfaces limpias, funcionales y accesibles, combinando diseño y código para lograr experiencias agradables al usuario.
+        </p>
+        <p>
+          En este blog comparto mis aprendizajes, ejercicios prácticos y recursos sobre HTML, CSS, JavaScript y otros temas relacionados con el diseño y desarrollo web. Mi objetivo es seguir aprendiendo y aportar a la comunidad.
+        </p>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h3>💻 Tecnologías y herramientas</h3>
+      <div class="skill-list">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>Git & GitHub</span>
+        <span>Figma</span>
+        <span>Responsive Design</span>
+        <span>VS Code</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Creado por Alejandro González — 2025
+  </footer>
+</body>
+</html>

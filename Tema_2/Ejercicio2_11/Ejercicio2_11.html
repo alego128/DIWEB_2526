@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11: Estilos en función de la jerarquía</title>
+    <link rel="stylesheet" href="Ejercicio2_11.css">
+</head>
+
+<body>
+
+    <!-- Encabezado con clase -->
+    <h1 class="titulo" style="color: orange;">Título Principal</h1>
+
+    <!-- Párrafo con ID -->
+    <p id="parrafo">Este es un párrafo de ejemplo</p>
+
+    <!-- Contenedor con otro párrafo dentro -->
+    <div class="contenedor"> 
+        <p class="texto">Texto dentro de un div</p>
+    </div>
+
+    <!-- 1. El <h1> es de color naranja. 
+   Gana el estilo en línea porque tiene la mayor prioridad. -->
+
+    <!-- 2. El párrafo con ID "parrafo" es de color rojo. 
+   Prevalece la regla de ID sobre las demás. -->
+
+    <!-- 3. El párrafo con clase "texto" dentro del div es de color morado. 
+   Se aplica la regla con !important, que tiene máxima prioridad. -->
+
+</body>
+
+</html>
