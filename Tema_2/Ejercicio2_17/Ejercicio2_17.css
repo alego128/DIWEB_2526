@@ -1,0 +1,42 @@
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+    color: #007acc;
+    font-size: 32px;
+    text-align: center; 
+    text-transform: uppercase; 
+}
+
+p {
+    font-size: 16px; 
+    color: #333333; 
+    text-align: justify; 
+    text-indent: 30px; 
+}
+
+h2 {
+    font-size: 24px;
+    color: #222222; 
+    letter-spacing: 3px; 
+    text-decoration: underline; 
+}
+
+blockquote {
+    font-style: italic; 
+    color: #444444; 
+    background-color: #f0f8ff; 
+    padding: 10px; 
+    border-left: 3px solid #007acc; 
+}
+
+/*
+1. ¿Cómo cambia la apariencia del texto cuando aplicas diferentes colores y tamaños?
+Se vuelve mas legible y mejor visualmente dependiendo del tamaño, los colores o combinaciones que usemos
+
+2. ¿Qué combinación de propiedades y colores te parece más profesional o atractiva?
+Depende del contexto de aplicación o página web que esté diseñando, pero generalmente me parece mejor colores neutros y tamaños legibles porque son más profesionales.
+*/

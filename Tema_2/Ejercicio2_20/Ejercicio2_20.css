@@ -1,0 +1,20 @@
+/* Lista ordenada de tareas */
+ol.tareas {
+  list-style-type: decimal-leading-zero;
+  list-style-position: inside;
+  color: #003366;
+}
+
+/* Lista no ordenada de materiales */
+ul.materiales {
+  list-style-type: square;
+  list-style-position: outside;
+  color: #2a7a1f;
+}
+
+/* Lista personalizada de recursos de estudio */
+ul.recursos {
+  list-style-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVF5Awnjj90tV4s_2ASQbmviJ2qY9u4lq7HK7FWtFSOe6dc4YexbyumwT3yGHvk1zxXT-WoM5F9-fZttYuvFhSEYu6aVova5MMxnldpbg&s=10);
+  list-style-position: inside;
+  color: #444444;
+}

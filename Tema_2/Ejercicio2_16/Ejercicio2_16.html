@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: background-attachment en CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        section {
+            padding: 50px;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /*Fondo scroll */
+        .uno {
+            background-image: url('https://www.fcbarcelona.com/photo-resources/2020/04/30/43337a9f-3781-4886-948c-f70912e4b1af/1920x1080_Messi_primerGol-min.jpg?width=1200&height=750');
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll;
+            background-color: rgba(255, 255, 255, 0.5); /* Transparencia */
+            background-blend-mode: lighten;
+            color: black;
+        }
+
+        /*Fondo fijo */
+        .dos {
+            background-image: url('https://www.fcbarcelona.com/photo-resources/2020/03/29/fb93f75f-ece8-408c-85c8-a3ee0f045291/27-05-09-MESSI-ALEGRIA-02.jpg?width=1200&height=750');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: rgba(255, 255, 255, 0.5); /* Transparencia */
+            background-blend-mode: lighten;
+            color: black;
+        }
+
+        /*Fondo local */
+        .tres {
+            background-image: url('https://assets1.afa.com.ar/media/DANI/NOVIEMBRE/WebN-messicgol2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: local;
+            background-color: rgba(255, 255, 255, 0.5); /* Transparencia */
+            background-blend-mode: lighten;
+            color: black;
+            height: 300px;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="uno">
+        <h1>Fondo con background-attachment: scroll</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec convallis lacus vitae ultricies eleifend.
+            Curabitur a eros eget sapien sodales varius non in eros.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec convallis lacus vitae ultricies eleifend.
+            Curabitur a eros eget sapien sodales varius non in eros.
+        </p>
+    </section>
+
+    <section class="dos">
+        <h1>Fondo con background-attachment: fixed</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec convallis lacus vitae ultricies eleifend.
+            Curabitur a eros eget sapien sodales varius non in eros.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec convallis lacus vitae ultricies eleifend.
+            Curabitur a eros eget sapien sodales varius non in eros.
+        </p>
+    </section>
+
+    <section class="tres">
+        <h1>Fondo con background-attachment: local</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec convallis lacus vitae ultricies eleifend.
+            Curabitur a eros eget sapien sodales varius non in eros.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec convallis lacus vitae ultricies eleifend.
+            Curabitur a eros eget sapien sodales varius non in eros.
+        </p>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+h1 {
+    font-family: serif;
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.parrafo1 {
+    font-family: sans-serif;
+}
+
+.parrafo3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 
+1. Noto que con la fuente serif en el h1, el título tiene un aspecto más tradicional y formal en cambio el párrafo con fuente sans-serif (parrafo1) se ve más moderno y limpio.
+2. El tamaño de la fuente y el interlineado afecta a la comodidad de la lectura de forma que un tamaño más grande y un interlineado adecuado facilitan la lectura.
+3. Mi combinación favorita es la del h1 con fuente serif y el párrafo con fuente 'Roboto', ya que ofrece un buen equilibrio entre formalidad y modernidad.
+*/

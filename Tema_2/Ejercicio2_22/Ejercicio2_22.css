@@ -1,0 +1,20 @@
+.seccion1 {
+    margin: 20px;
+    background-color: #ac987a; 
+}
+
+.seccion2 {
+    margin: 5px 10px 15px 20px;
+    background-color: #2725aa;
+}
+
+.seccion3 {
+    margin: auto;
+    margin-top: 50px;
+}
+
+.contenedor {
+    width: 80%;
+    background-color: #a8d0e6;
+    padding: 20px;
+}
