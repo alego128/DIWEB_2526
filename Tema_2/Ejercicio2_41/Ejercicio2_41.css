@@ -1,0 +1,26 @@
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+    width: 120px;     
+    height: 120px;
+    background-image: url('sprite.png');
+}
+
+/* Icono 1 */
+.uno {
+    background-position: -450px -530px;
+}
+
+/* Icono 2 */
+.dos {
+    background-position: -290px 900px;
+}
+
+/* Icono 3 */
+.tres {
+    background-position: -800px -500px;
+}

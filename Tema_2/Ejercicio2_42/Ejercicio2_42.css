@@ -1,0 +1,19 @@
+@media screen {
+    
+}
+
+p {
+    font-size: 18px;
+    font-style: italic; 
+    font-weight: bold;
+    text-align: left;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+href {
+    text-align: left;
+}

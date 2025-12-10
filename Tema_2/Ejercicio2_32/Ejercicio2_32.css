@@ -1,0 +1,50 @@
+.contenedor-principal {
+    position: relative;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.static {
+    position: static; 
+    background-color: lightblue;
+    border: 2px solid blue;
+    margin: 10px;
+    padding: 10px;
+}
+
+.relative {
+    position: relative;
+    top: 20px; 
+    left: 20px;
+    background-color: lightgreen;
+    border: 2px solid green;
+    margin: 10px;
+    padding: 10px;
+}
+
+.absolute {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: lightcoral;
+    border: 2px solid red;
+    padding: 10px;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: lightgoldenrodyellow;
+    border: 2px solid gold;
+    padding: 10px;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: lightpink;
+    border: 2px solid deeppink;
+    padding: 10px;
+    margin: 10px 0;
+}

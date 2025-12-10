@@ -1,0 +1,27 @@
+/* Ejemplo de display block */
+.block {
+    display: block;
+    background-color: #3bd8a4;
+    color: white;
+}
+
+/* Ejemplo de display inline */
+.inline {
+    display: inline;
+    background-color: #c8e03b;
+    color: white;
+}
+
+/* Ejemplo de display inline-block */
+.inline-block {
+    display: inline-block;
+    background-color: #d13c9f;
+    color: white;
+}
+
+/* Ejemplo de display none */
+.none {
+    display: none;
+    background-color: #5275d4;
+    color: white;
+}

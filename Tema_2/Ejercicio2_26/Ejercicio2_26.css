@@ -1,0 +1,40 @@
+/* Estilos comunes para ambas cajas */
+.caja-base {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 10px solid #ef4444;
+    margin: 20px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #1f2937;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modelo de Caja Estándar (content-box) */
+.caja-content-box {
+    box-sizing: content-box;
+    background-color: #fca5a5;
+    width: 140px;
+}
+
+/* Modelo de Caja Alternativo (border-box) */
+.caja-border-box {
+    box-sizing: border-box;
+    background-color: #a7f3d0;
+    border-color: #059669;
+}
+
+h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 2rem;
+    text-align: center;
+}

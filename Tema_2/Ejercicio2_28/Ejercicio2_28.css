@@ -1,0 +1,22 @@
+.seccion {
+    width: 250px;
+    padding: 20px;
+    margin: 20px;
+    font-size: 18px;
+}
+
+/* Primera sección: estilo de contorno */
+.estilo {
+    outline: 3px dotted blue;
+}
+
+/* Segunda sección: ancho de contorno */
+.ancho {
+    outline: 5px solid red;
+}
+
+/* Tercera sección: desplazamiento del contorno */
+.desplazamiento {
+    outline: 3px dashed green;
+    outline-offset: 10px;
+}

@@ -1,0 +1,11 @@
+.article-image {
+    float: right;   
+}
+
+.footer-note {
+    clear: both;      
+}
+
+img.article-image {
+    margin: 0 0 10px 10px;  
+}

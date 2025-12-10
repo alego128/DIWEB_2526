@@ -1,0 +1,29 @@
+/* Primera sección: Relleno uniforme de 20px */
+.seccion-uniforme {
+    padding: 20px;          
+    background-color: #3b70e2;
+    margin-bottom: 20px;
+}
+
+/* Segunda sección: Relleno asimétrico */
+.seccion-asimetrica {
+    padding: 10px 15px 20px 25px; 
+    background-color: #c2bd9f;    
+    margin-bottom: 20px;
+}
+
+/* Tercera sección: Botón con relleno grande */
+.seccion-boton button {
+    padding: 30px 50px;    
+    background-color: #134713;   
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/* Cambio de color al pasar el cursor */
+
+.seccion-boton button:hover {
+    background-color: #228B22;   
+}

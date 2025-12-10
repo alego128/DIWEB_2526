@@ -1,0 +1,10 @@
+.contenedor {
+    margin: 0 auto;      
+    width: 90%;         
+    max-width: 900px;   
+    min-width: 300px;  
+}
+
+.caja-imagen {
+    height: 200px;     
+}
