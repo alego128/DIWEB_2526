@@ -1,0 +1,47 @@
+
+.caja {
+    width: 150px;
+    height: 100px;
+    border: 2px solid #000;
+    padding: 10px;
+    margin: 20px;
+    box-sizing: content-box;
+    display: inline-block;
+}
+
+
+/* Diferencias observadas:
+
+inline → No respeta ancho ni alto; las cajas se colocan en línea.
+
+inline-block → Respeta ancho y alto; las cajas se colocan en línea.
+
+block → Respeta ancho y alto; las cajas se colocan en columna, ocupando toda la línea. */
+
+.contenedor {
+    position: relative;
+}
+
+.especial {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* La caja .especial se posiciona respecto a 
+.contenedor, porque este tiene position: relative.
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.especial {
+    color: red;
+}
+
+nav a:hover {
+    color: blue;
+    text-decoration: underline;
+}

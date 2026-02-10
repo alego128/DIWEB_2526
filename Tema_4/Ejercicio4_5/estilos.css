@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.main {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,64 @@
+/* Estructura general con Grid */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    gap: 10px;
+}
+
+/* Header con Flexbox */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ccc;
+    padding: 10px 20px;
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+header nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+header nav a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #eee;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    width: 200px;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ccc;
+    padding: 10px 20px;
+}
